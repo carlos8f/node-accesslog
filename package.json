@@ -1,0 +1,34 @@
+{
+  "name": "accesslog",
+  "version": "0.0.0",
+  "description": "Simple common/combined access log middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/carlos8f/node-accesslog.git"
+  },
+  "keywords": [
+    "logger",
+    "log",
+    "access",
+    "common",
+    "combined",
+    "http",
+    "apache",
+    "nsca"
+  ],
+  "author": "Carlos Rodriguez <carlos@s8f.org> (http://s8f.org/)",
+  "license": "MIT",
+  "dependencies": {
+    "addr": "~1.0.0",
+    "dateable": "~0.1.2"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "request": "*",
+    "idgen": "1.x"
+  }
+}
