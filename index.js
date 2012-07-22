@@ -14,7 +14,7 @@ exports = module.exports = function accesslog(options) {
     stream = process.stdout;
   }
   options.format || (options.format = "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"");
-  var render = compile(options.format, {options: options, stream: stream});
+  var render = compile(options.format, {options: options});
 
   return function accessLogger(req, res, next) {
     var end = res.end;
