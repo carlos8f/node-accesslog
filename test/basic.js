@@ -6,6 +6,7 @@ var accesslog = require('../')
   , baseUrl = 'http://localhost:' + port
   , tmpLog = '/tmp/' + require('idgen')() + '.log'
   , exec = require('child_process').exec
+  , fs = require('fs')
   ;
 
 describe('basic test', function() {
@@ -20,6 +21,8 @@ describe('basic test', function() {
       });
     }).listen(port, done);
   });
+  after(fs.unlink.bind(null, tmpLog));
+  
   it('performs a request', function(done) {
     request({url: baseUrl + '/test/url', json: true}, function(err, res, data) {
       assert.equal(res.statusCode, 200);
