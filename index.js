@@ -5,7 +5,7 @@ exports = module.exports = function accesslog(options) {
 
   var stream;
   if (options.path) {
-    stream = require('fs').createWriteStream(options.path);
+    stream = require('fs').createWriteStream(options.path, {flags: 'a+'});
   }
   else if (options.stream) {
     stream = options.stream;
