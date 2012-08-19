@@ -3,6 +3,8 @@ accesslog
 
 Simple common/combined access log middleware
 
+[![build status](https://secure.travis-ci.org/carlos8f/node-accesslog.png)](http://travis-ci.org/carlos8f/node-accesslog)
+
 Usage
 =====
 
